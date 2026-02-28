@@ -68,7 +68,7 @@ export const SERVICES = [
     title: "Transporte Terrestre y Marítimo",
     description:
       "Todo tipo de traslado. Carga pesada, larga y extra-larga. Marítimas: gabarras, barcos según dimensiones.",
-    image: "/services/Terrestre.png",
+    image: "/services/terrestre.png",
   },
   {
     id: "oil",
@@ -133,8 +133,8 @@ export const MAP_TITLE = "Presencia Global";
 export const MAP_SUBTITLE =
   "Sede en Miami (Doral) y cobertura en los principales puertos de Venezuela.";
 
-/** RIF: PDF en public. Ej: public/rif.pdf → /rif.pdf */
-export const RIF_PDF_PATH = "/rif.pdf";
+/** RIF: PDF en public. Nombre del archivo debe coincidir (mayúsculas/minúsculas en Vercel). */
+export const RIF_PDF_PATH = "/RIF.pdf";
 export const RIF_SECTION_TITLE = "RIF";
 export const RIF_SECTION_SUBTITLE = "Registro de Información Fiscal. Documento oficial de la empresa.";
 export const RIF_BUTTON_LABEL = "Ver RIF";
