@@ -1,16 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import ServiceCard from "./ServiceCard";
-import { SERVICES_TITLE, SERVICES_SUBTITLE, SERVICES } from "@/lib/constants";
 
-export default function ServiceGrid() {
+export default function BrandingSection() {
   return (
     <section
-      id="servicios"
+      id="marca"
       className="relative border-t border-gold/20 bg-black px-4 py-20 md:px-6"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-5xl">
         <motion.header
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -20,26 +18,26 @@ export default function ServiceGrid() {
         >
           <h2 className="text-3xl font-bold md:text-4xl">
             <span className="bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent">
-              {SERVICES_TITLE}
+              Nuestra marca
             </span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
-            {SERVICES_SUBTITLE}
+            Identidad corporativa J.J LOGISTICS C.A.
           </p>
         </motion.header>
-
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((service, i) => (
-            <ServiceCard
-              key={service.id}
-              id={service.id}
-              title={service.title}
-              description={service.description}
-              index={i}
-              image={service.image}
-            />
-          ))}
-        </div>
+        <motion.div
+          className="mt-12 overflow-hidden rounded-2xl border border-gold/30 bg-gray-900/40"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <img
+            src="/branding.png"
+            alt="Branding J.J LOGISTICS C.A. - Identidad corporativa"
+            className="w-full object-contain"
+          />
+        </motion.div>
       </div>
     </section>
   );

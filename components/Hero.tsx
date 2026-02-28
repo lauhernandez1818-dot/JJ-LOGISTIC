@@ -84,13 +84,16 @@ export default function Hero() {
             ))}
           </motion.div>
           <motion.div
-            className="mt-10 flex justify-center lg:justify-start"
+            className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <GoldButton href="#contacto" variant="primary">
               {CTA_QUOTE}
+            </GoldButton>
+            <GoldButton href="#servicios" variant="secondary">
+              Ver servicios
             </GoldButton>
           </motion.div>
         </div>
@@ -101,36 +104,38 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <div className="relative aspect-[16/10] w-full max-w-2xl mx-auto">
-            {/* Placeholder: cargo plane + ship aesthetic with gradient overlay */}
-            <div className="absolute inset-0 rounded-2xl border border-gold/40 bg-gradient-to-br from-black via-gray-900 to-black">
-              <div className="absolute inset-0 flex items-center justify-center gap-8 p-8 opacity-90">
-                <svg
-                  className="h-24 w-24 text-gold/60 md:h-32 md:w-32"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.2}
-                    d="M6 12L3 21h18l-3-9M6 12h12M6 12l3-9h6l3 9"
-                  />
-                </svg>
-                <svg
-                  className="h-24 w-24 text-gold/60 md:h-32 md:w-32"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.2}
-                    d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 7 3 2h-3.5l-1-1H9l-2 2h2m-4 0H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-4"
-                  />
-                </svg>
+          <div className="rounded-2xl border border-gold/40 bg-gradient-to-br from-black via-gray-900 to-black p-6 md:p-8">
+            <p className="mb-6 text-center text-sm font-medium text-gold/90">
+              Cobertura multimodal
+            </p>
+            <div className="grid grid-cols-2 gap-5 md:gap-6">
+              {/* Terrestre */}
+              <div className="flex flex-col items-center rounded-xl border border-gold/20 bg-black/40 p-4 transition hover:border-gold/40">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/50 bg-gold/10 md:h-16 md:w-16">
+                  <span className="text-2xl md:text-3xl" role="img" aria-label="Terrestre">🚚</span>
+                </div>
+                <span className="mt-2 text-sm font-semibold text-gold-light">Terrestre</span>
+              </div>
+              {/* Aéreo - avión */}
+              <div className="flex flex-col items-center rounded-xl border border-gold/20 bg-black/40 p-4 transition hover:border-gold/40">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/50 bg-gold/10 md:h-16 md:w-16">
+                  <span className="text-2xl md:text-3xl" role="img" aria-label="Aéreo">✈️</span>
+                </div>
+                <span className="mt-2 text-sm font-semibold text-gold-light">Aéreo</span>
+              </div>
+              {/* Marítimo - barco */}
+              <div className="flex flex-col items-center rounded-xl border border-gold/20 bg-black/40 p-4 transition hover:border-gold/40">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/50 bg-gold/10 md:h-16 md:w-16">
+                  <span className="text-2xl md:text-3xl" role="img" aria-label="Marítimo">🚢</span>
+                </div>
+                <span className="mt-2 text-sm font-semibold text-gold-light">Marítimo</span>
+              </div>
+              {/* Helicóptero */}
+              <div className="flex flex-col items-center rounded-xl border border-gold/20 bg-black/40 p-4 transition hover:border-gold/40">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/50 bg-gold/10 md:h-16 md:w-16">
+                  <span className="text-2xl md:text-3xl" role="img" aria-label="Helicóptero">🚁</span>
+                </div>
+                <span className="mt-2 text-sm font-semibold text-gold-light">Helicóptero</span>
               </div>
             </div>
           </div>

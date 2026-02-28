@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { SITE_NAME, USA_ADDRESS, NAV_LINKS } from "@/lib/constants";
+import { SITE_NAME, TAGLINE, USA_ADDRESS, NAV_LINKS } from "@/lib/constants";
+
+const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(USA_ADDRESS.full)}`;
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -7,11 +9,12 @@ export default function Footer() {
   return (
     <footer className="border-t border-gold/30 bg-black">
       <div className="mx-auto max-w-7xl px-4 py-12 md:px-6">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <p className="text-lg font-bold text-gold">{SITE_NAME}</p>
+            <p className="mt-1 text-sm font-medium text-gold/80">{TAGLINE}</p>
             <p className="mt-2 text-sm text-gray-400">
-              Excelencia logística y administrativa global.
+              Logística administrativa en USA y operaciones en Venezuela.
             </p>
           </div>
           <div>
@@ -21,9 +24,17 @@ export default function Footer() {
               <br />
               {USA_ADDRESS.city}, {USA_ADDRESS.state} {USA_ADDRESS.zip}
             </address>
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-block text-sm text-gold hover:text-gold-light transition"
+            >
+              Ver en mapa
+            </a>
           </div>
           <div>
-            <p className="font-semibold text-white">Enlaces</p>
+            <p className="font-semibold text-white">Enlaces rápidos</p>
             <ul className="mt-2 space-y-1">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
@@ -37,8 +48,23 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+          <div>
+            <p className="font-semibold text-white">Nuestras entidades</p>
+            <ul className="mt-2 space-y-1 text-sm text-gray-400">
+              <li>
+                <Link href="#dual-hub" className="transition hover:text-gold">
+                  JJ ASOCIADOS LLC
+                </Link>
+              </li>
+              <li>
+                <Link href="#dual-hub" className="transition hover:text-gold">
+                  JJ LOGISTIC PLUS, C.A.
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="mt-8 border-t border-gold/20 pt-8 text-center text-sm text-gray-500">
+        <div className="mt-10 border-t border-gold/20 pt-8 text-center text-sm text-gray-500">
           © {currentYear} {SITE_NAME}. Todos los derechos reservados.
         </div>
       </div>

@@ -3,21 +3,32 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { SITE_NAME, NAV_LINKS } from "@/lib/constants";
+import { SITE_NAME, NAV_LINKS, BRAND_LOGO_PATH } from "@/lib/constants";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [logoError, setLogoError] = useState(false);
+  const showLogo = BRAND_LOGO_PATH && !logoError;
 
   return (
     <header className="sticky top-0 z-50 border-b border-gold/30 bg-black/95 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
         <Link
           href="#hero"
-          className="text-lg font-bold tracking-tight text-white md:text-xl"
+          className="flex items-center gap-2 text-lg font-bold tracking-tight text-white md:text-xl"
         >
-          <span className="bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent">
-            {SITE_NAME}
-          </span>
+          {showLogo ? (
+            <img
+              src={BRAND_LOGO_PATH}
+              alt={SITE_NAME}
+              className="h-10 w-auto max-w-[180px] object-contain md:h-12"
+              onError={() => setLogoError(true)}
+            />
+          ) : (
+            <span className="bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent">
+              {SITE_NAME}
+            </span>
+          )}
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">

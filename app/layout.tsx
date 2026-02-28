@@ -11,16 +11,17 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "JJ LOGISTIC & JJ ASOCIADOS | Asesoría Técnica y Logística USA-Venezuela",
+  title: "JJ LOGISTIC PLUS | Logística Plus - Asesoría USA y Venezuela",
   description:
-    "Asesoría técnica y logística para que su mercancía llegue al país. Más de 50 años de experiencia y personal cualificado y certificado. Agenciamiento aduanal, Doral Miami y puertos de Venezuela.",
+    "Logística Administrativa en USA y operaciones en Venezuela. JJ Logistic Plus, C.A. y JJ Asociados LLC. Agenciamiento aduanal, transporte terrestre y marítimo, más de 50 años de experiencia.",
   keywords: [
+    "JJ LOGISTIC PLUS",
+    "Logística Plus",
     "asesoría técnica y logística",
     "más de 50 años de experiencia",
     "personal cualificado y certificado",
     "Logística USA-Venezuela",
     "Agenciamiento Aduanal",
-    "JJ Logistic",
     "JJ Asociados",
     "Doral",
     "Miami",
@@ -32,9 +33,9 @@ export const metadata: Metadata = {
     "importación",
   ],
   openGraph: {
-    title: "JJ LOGISTIC & JJ ASOCIADOS | Asesoría Técnica y Logística, +50 Años",
+    title: "JJ LOGISTIC PLUS | Logística Plus - Asesoría USA y Venezuela",
     description:
-      "Asesoría técnica y logística para que su mercancía llegue al país. Más de 50 años de experiencia y personal cualificado y certificado. Dos hubs: Miami (Doral) y Venezuela.",
+      "Logística Administrativa en USA y operaciones en Venezuela. Más de 50 años de experiencia. Dos hubs: Miami (Doral) y Venezuela.",
     type: "website",
   },
 };
