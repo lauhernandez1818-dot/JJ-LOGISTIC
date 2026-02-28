@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-10 border-t border-gold/20 pt-8 text-center text-sm text-gray-500">
-          © {currentYear} {SITE_NAME}. Todos los derechos reservados.
+          <p>© {currentYear} {SITE_NAME}. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

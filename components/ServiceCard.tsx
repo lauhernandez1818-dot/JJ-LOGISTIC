@@ -11,7 +11,7 @@ type ServiceCardProps = {
   image?: string;
 };
 
-function ServiceIcon({ id }: { id: string }) {
+export function ServiceIcon({ id }: { id: string }) {
   const iconClass = "h-8 w-8 text-gold md:h-10 md:w-10";
   switch (id) {
     case "customs":

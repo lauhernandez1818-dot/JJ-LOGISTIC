@@ -13,10 +13,16 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[90vh] overflow-hidden bg-black px-4 pt-16 pb-24 md:px-6 md:pt-24"
+      className="relative min-h-[90vh] min-h-[100dvh] overflow-hidden bg-[#0a0a0a]/40 px-4 pt-20 pb-28 md:bg-[#0a0a0a]/50 md:px-6 md:pt-24 md:pb-24"
     >
-      {/* Golden Swoosh background */}
-      <div className="golden-swoosh inset-0">
+      {/* Imagen de fondo Inicio.png */}
+      <div className="hero-mosaic z-0" aria-hidden />
+
+      {/* Capa suave para legibilidad sin tapar la foto */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/55 via-black/25 to-black/65 pointer-events-none md:from-black/50 md:via-transparent md:to-black/60" aria-hidden />
+
+      {/* Golden Swoosh (sutil, encima del mosaico) */}
+      <div className="golden-swoosh inset-0 z-[2]">
         <svg viewBox="0 0 1200 800" className="absolute inset-0 h-full w-full">
           <defs>
             <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -49,9 +55,9 @@ export default function Hero() {
       </div>
 
       {/* Soft gold glow behind headline */}
-      <div className="absolute inset-0 bg-hero-glow pointer-events-none z-[1]" aria-hidden />
+      <div className="absolute inset-0 bg-hero-glow pointer-events-none z-[3] opacity-80" aria-hidden />
       {/* Bottom gradient for depth */}
-      <div className="hero-gradient-bottom absolute bottom-0 left-0 right-0 h-40 z-[1] pointer-events-none" aria-hidden />
+      <div className="hero-gradient-bottom absolute bottom-0 left-0 right-0 h-40 z-[3] pointer-events-none" aria-hidden />
 
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
         <div className="flex-1 text-center lg:text-left">

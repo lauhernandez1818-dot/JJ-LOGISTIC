@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import RIFSection from "@/components/RIFSection";
 import ObjectiveSection from "@/components/ObjectiveSection";
 import DualHubStrategy from "@/components/DualHubStrategy";
 import ServiceGrid from "@/components/ServiceGrid";
@@ -13,6 +14,7 @@ export default function Home() {
       <ObjectiveSection />
       <DualHubStrategy />
       <ServiceGrid />
+      <RIFSection />
       <GlobalMap />
       <BrandingSection />
       <ContactForm />

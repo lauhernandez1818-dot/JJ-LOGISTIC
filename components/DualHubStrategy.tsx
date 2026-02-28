@@ -13,7 +13,7 @@ export default function DualHubStrategy() {
   return (
     <section
       id="dual-hub"
-      className="section-alt relative border-t border-gold/20 px-4 py-20 md:px-6"
+      className="section-alt relative border-t border-gold/20 px-4 py-20 md:px-6 md:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <motion.header

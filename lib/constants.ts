@@ -47,14 +47,14 @@ export const SERVICES = [
     title: "Contratación de Agenciamiento Aduanal",
     description:
       "La Guaira, Maiquetía, Puerto Cabello y Guanta. Gestión integral de despacho aduanero, documentación y cumplimiento normativo.",
-    image: "/services/agenciamiento.jpg",
+    image: "/services/AgenciamientoA.png",
   },
   {
     id: "import",
     title: "Logísticas de Importación",
     description:
       "Todo lo relacionado con la inspección y trámites de importación desde la llegada a costado de buque o avión hasta la entrega final en el almacén que el cliente asigne.",
-    image: "/services/importacion.jpg",
+    image: "/services/LogisticaD.png",
   },
   {
     id: "machinery",
@@ -68,7 +68,7 @@ export const SERVICES = [
     title: "Transporte Terrestre y Marítimo",
     description:
       "Todo tipo de traslado. Carga pesada, larga y extra-larga. Marítimas: gabarras, barcos según dimensiones.",
-    image: "/services/transporte.jpg",
+    image: "/services/Terrestre.png",
   },
   {
     id: "oil",
@@ -89,12 +89,13 @@ export const SERVICES = [
     title: "Escolta de Cargas e Inspección Técnica Certificada",
     description:
       "Escolta de cargas marítimas y terrestres. Inspección de recepción en puertos y aeropuertos, verificación documental y física, certificación de entrega al usuario final e informes conforme a normas aplicables.",
-    image: "/services/escolta-inspeccion.jpg",
+    image: "/services/EscoltaD.png",
   },
 ] as const;
 
 export const NAV_LINKS = [
   { href: "#hero", label: "Inicio" },
+  { href: "#rif", label: "RIF" },
   { href: "#objetivo", label: "Objetivo" },
   { href: "#dual-hub", label: "Estrategia Dual-Hub" },
   { href: "#servicios", label: "Servicios" },
@@ -131,6 +132,12 @@ export const SERVICES_SUBTITLE =
 export const MAP_TITLE = "Presencia Global";
 export const MAP_SUBTITLE =
   "Sede en Miami (Doral) y cobertura en los principales puertos de Venezuela.";
+
+/** RIF: PDF en public. Ej: public/rif.pdf → /rif.pdf */
+export const RIF_PDF_PATH = "/rif.pdf";
+export const RIF_SECTION_TITLE = "RIF";
+export const RIF_SECTION_SUBTITLE = "Registro de Información Fiscal. Documento oficial de la empresa.";
+export const RIF_BUTTON_LABEL = "Ver RIF";
 
 export const CONTACT_TITLE = "Solicitar Cotización";
 export const CONTACT_SUBTITLE =

@@ -16,7 +16,7 @@ export default function GlobalMap() {
   return (
     <section
       id="mapa"
-      className="section-alt relative border-t border-gold/20 px-4 py-20 md:px-6"
+      className="section-alt relative border-t border-gold/20 px-4 py-20 md:px-6 md:py-24"
     >
       <div className="mx-auto max-w-5xl">
         <motion.header

@@ -54,9 +54,22 @@ export default function ContactForm() {
   return (
     <section
       id="contacto"
-      className="section-alt relative border-t border-gold/20 px-4 py-20 md:px-6"
+      className="relative overflow-hidden border-t border-gold/20 py-20 md:py-24"
     >
-      <div className="mx-auto max-w-2xl">
+      {/* Fondo difuminado con colores de la empresa (oro y negro) */}
+      <div
+        className="absolute inset-0 bg-[#0a0a0a]"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 opacity-40"
+        style={{
+          background: "radial-gradient(ellipse 80% 60% at 50% 30%, rgba(212, 175, 55, 0.25) 0%, transparent 50%), radial-gradient(ellipse 60% 80% at 80% 70%, rgba(249, 224, 118, 0.12) 0%, transparent 45%), radial-gradient(ellipse 70% 50% at 20% 80%, rgba(212, 175, 55, 0.15) 0%, transparent 50%)",
+        }}
+        aria-hidden
+      />
+
+      <div className="relative z-10 mx-auto max-w-2xl px-4 md:px-6">
         <motion.header
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -69,14 +82,14 @@ export default function ContactForm() {
               {CONTACT_TITLE}
             </span>
           </h2>
-          <p className="mx-auto mt-4 text-gray-400">{CONTACT_SUBTITLE}</p>
+          <p className="mx-auto mt-4 text-gray-300">{CONTACT_SUBTITLE}</p>
           <div className="section-title-accent mx-auto mt-4" />
         </motion.header>
 
         <motion.form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-14 rounded-2xl border-2 border-gold/40 bg-black/60 p-6 shadow-xl shadow-black/40 backdrop-blur transition focus-within:border-gold/60 focus-within:shadow-gold/10 md:p-8"
+          className="mt-14 rounded-2xl border border-gold/40 bg-black/70 p-6 shadow-2xl shadow-black/50 backdrop-blur-md transition focus-within:border-gold/50 focus-within:shadow-gold/10 md:bg-black/60 md:p-8"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -92,7 +105,7 @@ export default function ContactForm() {
                 name="name"
                 type="text"
                 required
-                className="mt-1 w-full rounded-lg border border-gold/30 bg-black px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
+                className="mt-1 w-full rounded-lg border border-gold/30 bg-black/50 px-4 py-3 text-white placeholder-gray-500 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
                 placeholder="Tu nombre"
               />
             </div>
@@ -105,7 +118,7 @@ export default function ContactForm() {
                 name="email"
                 type="email"
                 required
-                className="mt-1 w-full rounded-lg border border-gold/30 bg-black px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
+                className="mt-1 w-full rounded-lg border border-gold/30 bg-black/50 px-4 py-3 text-white placeholder-gray-500 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
                 placeholder="tu@email.com"
               />
             </div>
@@ -117,7 +130,7 @@ export default function ContactForm() {
                 id="company"
                 name="company"
                 type="text"
-                className="mt-1 w-full rounded-lg border border-gold/30 bg-black px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
+                className="mt-1 w-full rounded-lg border border-gold/30 bg-black/50 px-4 py-3 text-white placeholder-gray-500 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
                 placeholder="Nombre de la empresa"
               />
             </div>
@@ -128,7 +141,7 @@ export default function ContactForm() {
               <select
                 id="service"
                 name="service"
-                className="mt-1 w-full rounded-lg border border-gold/30 bg-black px-4 py-3 text-white focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
+                className="mt-1 w-full rounded-lg border border-gold/30 bg-black/50 px-4 py-3 text-white transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
               >
                 <option value="">Seleccione un servicio</option>
                 {SERVICES.map((s) => (
@@ -147,7 +160,7 @@ export default function ContactForm() {
                 name="message"
                 rows={4}
                 required
-                className="mt-1 w-full rounded-lg border border-gold/30 bg-black px-4 py-3 text-white placeholder-gray-500 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
+                className="mt-1 w-full rounded-lg border border-gold/30 bg-black/50 px-4 py-3 text-white placeholder-gray-500 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
                 placeholder="Describe tu consulta o proyecto..."
               />
             </div>

@@ -47,7 +47,7 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="group relative px-3 py-2 text-sm font-medium text-gray-300 transition hover:text-gold focus:text-gold focus:outline-none"
+                className="group relative px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:text-gold focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-[#0a0a0a] focus:rounded-sm"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-1/2 h-px w-0 -translate-x-1/2 bg-gold transition-[width] duration-200 group-hover:w-2/3" aria-hidden />
@@ -68,21 +68,21 @@ export default function Navbar() {
         <button
           type="button"
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
-          className="relative flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded p-2 md:hidden"
+          className="relative flex h-10 w-10 flex-shrink-0 flex-col items-center justify-center gap-1.5 rounded-lg text-white transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-[#0a0a0a] md:hidden"
           onClick={() => setOpen(!open)}
         >
           <span
-            className={`block h-0.5 w-6 origin-center bg-white transition-all duration-200 ${
+            className={`block h-0.5 w-6 origin-center rounded-full bg-white transition-all duration-200 ${
               open ? "translate-y-2 rotate-45" : ""
             }`}
           />
           <span
-            className={`block h-0.5 w-6 bg-white transition-all duration-200 ${
+            className={`block h-0.5 w-6 rounded-full bg-white transition-all duration-200 ${
               open ? "scale-x-0 opacity-0" : ""
             }`}
           />
           <span
-            className={`block h-0.5 w-6 origin-center bg-white transition-all duration-200 ${
+            className={`block h-0.5 w-6 origin-center rounded-full bg-white transition-all duration-200 ${
               open ? "-translate-y-2 -rotate-45" : ""
             }`}
           />

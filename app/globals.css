@@ -65,6 +65,41 @@ body {
   background: linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, transparent 50%);
 }
 
+/* Hero: Inicio.png imagen completa (no mosaico), animado y transparente */
+.hero-mosaic {
+  position: absolute;
+  inset: 0;
+  background-image: url("/Inicio.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.18;
+  animation: hero-mosaic-drift 45s ease-in-out infinite;
+  pointer-events: none;
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .hero-mosaic {
+    opacity: 0.22;
+    animation-duration: 60s;
+    background-position: center 40%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-mosaic {
+    animation: none;
+  }
+}
+
+@keyframes hero-mosaic-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(1%, 0.5%) scale(1.02); }
+  50% { transform: translate(-0.5%, 1%) scale(0.98); }
+  75% { transform: translate(0.5%, -0.5%) scale(1.01); }
+}
+
 @layer utilities {
   .text-gold {
     @apply bg-gold-gradient bg-clip-text text-transparent;
