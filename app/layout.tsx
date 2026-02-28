@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={montserrat.variable}>
-      <body className="min-h-screen bg-black font-sans antialiased">
+      <body className="min-h-screen bg-[#0a0a0a] font-sans antialiased text-[#FAFAFA]">
         <Navbar />
         <main>{children}</main>
         <Footer />

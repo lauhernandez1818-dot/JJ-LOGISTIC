@@ -26,6 +26,7 @@ export default function ServiceGrid() {
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
             {SERVICES_SUBTITLE}
           </p>
+          <div className="section-title-accent mx-auto mt-4" />
         </motion.header>
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

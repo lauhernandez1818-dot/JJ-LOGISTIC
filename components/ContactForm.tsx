@@ -54,7 +54,7 @@ export default function ContactForm() {
   return (
     <section
       id="contacto"
-      className="relative border-t border-gold/20 bg-black px-4 py-20 md:px-6"
+      className="section-alt relative border-t border-gold/20 px-4 py-20 md:px-6"
     >
       <div className="mx-auto max-w-2xl">
         <motion.header
@@ -70,12 +70,13 @@ export default function ContactForm() {
             </span>
           </h2>
           <p className="mx-auto mt-4 text-gray-400">{CONTACT_SUBTITLE}</p>
+          <div className="section-title-accent mx-auto mt-4" />
         </motion.header>
 
         <motion.form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-14 rounded-2xl border-2 border-gold/40 bg-black/60 p-6 shadow-xl shadow-gold/5 md:p-8"
+          className="mt-14 rounded-2xl border-2 border-gold/40 bg-black/60 p-6 shadow-xl shadow-black/40 backdrop-blur transition focus-within:border-gold/60 focus-within:shadow-gold/10 md:p-8"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

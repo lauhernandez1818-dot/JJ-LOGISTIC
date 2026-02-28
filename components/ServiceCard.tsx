@@ -76,11 +76,12 @@ export default function ServiceCard({
 
   return (
     <motion.article
-      className="flex flex-col overflow-hidden rounded-xl border border-gold/30 bg-black/80 backdrop-blur transition hover:border-gold/50 sm:p-0"
+      className="group flex flex-col overflow-hidden rounded-xl border border-gold/30 bg-black/80 shadow-lg shadow-black/30 backdrop-blur transition hover:border-gold/50 hover:shadow-gold hover:shadow-xl sm:p-0"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
+      whileHover={{ y: -4 }}
     >
       <div className="relative h-40 w-full shrink-0 bg-gray-900">
         {showImage ? (

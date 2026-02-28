@@ -16,7 +16,7 @@ export default function GlobalMap() {
   return (
     <section
       id="mapa"
-      className="relative border-t border-gold/20 bg-black px-4 py-20 md:px-6"
+      className="section-alt relative border-t border-gold/20 px-4 py-20 md:px-6"
     >
       <div className="mx-auto max-w-5xl">
         <motion.header
@@ -34,6 +34,7 @@ export default function GlobalMap() {
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
             {MAP_SUBTITLE}
           </p>
+          <div className="section-title-accent mx-auto mt-4" />
         </motion.header>
 
         {/* Conector desktop: arriba del grid para que no tape el texto */}
@@ -80,7 +81,7 @@ export default function GlobalMap() {
         <div className="mt-10 grid gap-8 md:grid-cols-2">
           {/* Bloque USA */}
           <motion.article
-            className="rounded-2xl border border-gold/30 bg-gray-900/40 p-8"
+            className="rounded-2xl border border-gold/30 bg-gray-900/40 p-8 shadow-lg shadow-black/20 transition hover:border-gold/50 hover:shadow-gold/10"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -120,7 +121,7 @@ export default function GlobalMap() {
 
           {/* Bloque Venezuela */}
           <motion.article
-            className="rounded-2xl border border-gold/30 bg-gray-900/40 p-8"
+            className="rounded-2xl border border-gold/30 bg-gray-900/40 p-8 shadow-lg shadow-black/20 transition hover:border-gold/50 hover:shadow-gold/10"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}

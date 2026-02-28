@@ -21,11 +21,12 @@ export default function EntityCard({
 }: EntityCardProps) {
   return (
     <motion.article
-      className="flex flex-col rounded-xl border border-gold/30 bg-black/80 p-6 backdrop-blur sm:p-8"
+      className="flex flex-col rounded-xl border border-gold/30 bg-black/80 p-6 shadow-lg shadow-black/30 backdrop-blur transition hover:border-gold/50 hover:shadow-gold hover:shadow-xl sm:p-8"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
+      whileHover={{ y: -4 }}
     >
       <h3 className="text-xl font-bold text-gold">{title}</h3>
       <p className="mt-1 text-sm font-medium text-gray-400">{entity}</p>

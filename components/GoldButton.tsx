@@ -20,11 +20,11 @@ export default function GoldButton({
   type = "button",
 }: GoldButtonProps) {
   const base =
-    "inline-flex items-center justify-center rounded-lg px-6 py-3 font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-black";
+    "inline-flex items-center justify-center rounded-lg px-6 py-3 font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-[#0a0a0a]";
   const primary =
-    "bg-gradient-to-br from-gold to-gold-light text-black hover:from-gold-light hover:to-gold hover:shadow-lg hover:shadow-gold/25";
+    "bg-gradient-to-br from-gold to-gold-light text-black shadow-lg shadow-gold/20 hover:from-gold-light hover:to-gold hover:shadow-xl hover:shadow-gold/30 hover:opacity-95";
   const secondary =
-    "border-2 border-gold bg-transparent text-gold hover:bg-gold/10";
+    "border-2 border-gold bg-transparent text-gold hover:bg-gold/10 hover:border-gold-light";
 
   const classes = `${base} ${variant === "primary" ? primary : secondary} ${className}`;
 

@@ -48,15 +48,20 @@ export default function Hero() {
         </svg>
       </div>
 
+      {/* Soft gold glow behind headline */}
+      <div className="absolute inset-0 bg-hero-glow pointer-events-none z-[1]" aria-hidden />
+      {/* Bottom gradient for depth */}
+      <div className="hero-gradient-bottom absolute bottom-0 left-0 right-0 h-40 z-[1] pointer-events-none" aria-hidden />
+
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
         <div className="flex-1 text-center lg:text-left">
           <motion.h1
-            className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl"
+            className="text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl lg:leading-[1.1]"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(212,175,55,0.15)]">
               {HERO_HEADLINE}
             </span>
           </motion.h1>
@@ -75,12 +80,15 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.25 }}
           >
             {HERO_TRUST_BADGES.map((badge, i) => (
-              <span
+              <motion.span
                 key={badge}
-                className="rounded-full border border-gold/50 bg-gold/10 px-4 py-2 text-sm font-medium text-gold-light"
+                className="rounded-full border border-gold/40 bg-gold/10 px-4 py-2 text-sm font-medium text-gold-light shadow-gold transition hover:border-gold/60 hover:bg-gold/15"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.35 + i * 0.06 }}
               >
                 {badge}
-              </span>
+              </motion.span>
             ))}
           </motion.div>
           <motion.div
@@ -104,35 +112,35 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <div className="rounded-2xl border border-gold/40 bg-gradient-to-br from-black via-gray-900 to-black p-6 md:p-8">
-            <p className="mb-6 text-center text-sm font-medium text-gold/90">
+          <div className="rounded-2xl border border-gold/35 bg-gradient-to-br from-black/90 via-gray-900/80 to-black/90 p-6 shadow-gold-lg shadow-black/50 md:p-8">
+            <p className="mb-6 text-center text-xs font-semibold uppercase tracking-wider text-gold/90">
               Cobertura multimodal
             </p>
-            <div className="grid grid-cols-2 gap-5 md:gap-6">
+            <div className="grid grid-cols-2 gap-4 md:gap-5">
               {/* Terrestre */}
-              <div className="flex flex-col items-center rounded-xl border border-gold/20 bg-black/40 p-4 transition hover:border-gold/40">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/50 bg-gold/10 md:h-16 md:w-16">
+              <div className="flex flex-col items-center rounded-xl border border-gold/20 bg-black/50 p-4 transition hover:border-gold/40 hover:bg-gold/5 md:p-5">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/40 bg-gold/10 shadow-inner md:h-16 md:w-16">
                   <span className="text-2xl md:text-3xl" role="img" aria-label="Terrestre">🚚</span>
                 </div>
                 <span className="mt-2 text-sm font-semibold text-gold-light">Terrestre</span>
               </div>
-              {/* Aéreo - avión */}
-              <div className="flex flex-col items-center rounded-xl border border-gold/20 bg-black/40 p-4 transition hover:border-gold/40">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/50 bg-gold/10 md:h-16 md:w-16">
+              {/* Aéreo */}
+              <div className="flex flex-col items-center rounded-xl border border-gold/20 bg-black/50 p-4 transition hover:border-gold/40 hover:bg-gold/5 md:p-5">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/40 bg-gold/10 shadow-inner md:h-16 md:w-16">
                   <span className="text-2xl md:text-3xl" role="img" aria-label="Aéreo">✈️</span>
                 </div>
                 <span className="mt-2 text-sm font-semibold text-gold-light">Aéreo</span>
               </div>
-              {/* Marítimo - barco */}
-              <div className="flex flex-col items-center rounded-xl border border-gold/20 bg-black/40 p-4 transition hover:border-gold/40">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/50 bg-gold/10 md:h-16 md:w-16">
+              {/* Marítimo */}
+              <div className="flex flex-col items-center rounded-xl border border-gold/20 bg-black/50 p-4 transition hover:border-gold/40 hover:bg-gold/5 md:p-5">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/40 bg-gold/10 shadow-inner md:h-16 md:w-16">
                   <span className="text-2xl md:text-3xl" role="img" aria-label="Marítimo">🚢</span>
                 </div>
                 <span className="mt-2 text-sm font-semibold text-gold-light">Marítimo</span>
               </div>
               {/* Helicóptero */}
-              <div className="flex flex-col items-center rounded-xl border border-gold/20 bg-black/40 p-4 transition hover:border-gold/40">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/50 bg-gold/10 md:h-16 md:w-16">
+              <div className="flex flex-col items-center rounded-xl border border-gold/20 bg-black/50 p-4 transition hover:border-gold/40 hover:bg-gold/5 md:p-5">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/40 bg-gold/10 shadow-inner md:h-16 md:w-16">
                   <span className="text-2xl md:text-3xl" role="img" aria-label="Helicóptero">🚁</span>
                 </div>
                 <span className="mt-2 text-sm font-semibold text-gold-light">Helicóptero</span>
