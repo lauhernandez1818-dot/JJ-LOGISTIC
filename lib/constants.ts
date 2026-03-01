@@ -61,7 +61,7 @@ export const SERVICES = [
     title: "Maquinaria Pesada y Grúas",
     description:
       "Contratación de maquinarias pesadas de todo tipo. Grúas para grandes y pequeñas dimensiones. Montacargas.",
-    image: "/services/maquinaria.jpg",
+    image: "/services/MaquinariaP.png",
   },
   {
     id: "transport",
@@ -75,14 +75,14 @@ export const SERVICES = [
     title: "Importación de Productos Petroleros y Otros",
     description:
       "Importación de productos petroleros y transporte especializado. Soluciones logísticas para el sector energético.",
-    image: "/services/petroleros.jpg",
+    image: "/services/ProductosP.png",
   },
   {
     id: "shipping",
     title: "Contratación de Navieras",
     description:
       "Trámites de traslados marítimos y aéreos a nivel mundial. Coordinación con navieras para su cadena de suministro.",
-    image: "/services/navieras.jpg",
+    image: "/services/ContratacionD.png",
   },
   {
     id: "inspection",

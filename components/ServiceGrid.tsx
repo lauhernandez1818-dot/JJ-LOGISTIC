@@ -59,7 +59,7 @@ function ServiceRow({
         <div className="mt-5 flex flex-wrap items-center gap-3 sm:mt-6">
           <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-gold/30 bg-gold/10 sm:h-12 sm:w-12">
             <span className="text-xl sm:text-2xl text-[initial]" role="img" aria-label="Servicio">
-              {service.id === "inspection" ? "👥" : service.id === "import" ? "📈" : service.id === "transport" ? "🚛" : "📑"}
+              {service.id === "inspection" ? "👥" : service.id === "import" ? "📈" : service.id === "transport" ? "🚛" : service.id === "machinery" ? "🏗️" : service.id === "oil" ? "🛢️" : service.id === "shipping" ? "🛳️" : "📑"}
             </span>
           </span>
           <span className="text-xs font-medium uppercase tracking-wider text-gold/70">
