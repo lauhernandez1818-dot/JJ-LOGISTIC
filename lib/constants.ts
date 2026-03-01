@@ -134,7 +134,7 @@ export const HERO_TRUST_BADGES = [
 
 export const DUAL_HUB_TITLE = "Estrategia Dual-Hub";
 export const DUAL_HUB_SUBTITLE =
-  "La sinergia entre nuestra oficina en Doral (Miami) y las operaciones en los puertos venezolanos nos permite ofrecer asesoría integral de punta a punta para que su mercancía llegue al país.";
+  "La sinergia entre nuestra oficina en Doral (Miami) y las operaciones en los puertos venezolanos nos permite ofrecer asesoría integral de punta a punta para que su mercancía llegue a su destino final.";
 
 export const SERVICES_TITLE = "Servicios Industriales";
 export const SERVICES_SUBTITLE =
