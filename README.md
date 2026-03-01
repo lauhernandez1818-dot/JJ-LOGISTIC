@@ -26,4 +26,16 @@ npm start
 
 ## SEO
 
-Metadata orientada a: Logística USA-Venezuela, Agenciamiento Aduanal, J.J LOGISTICS C.A, Doral, Puerto Cabello.
+Metadata orientada a: Logística USA-Venezuela, Agenciamiento Aduanal, J.J LOGISTICS C.A, Doral, Puerto Cabello. Incluye sitemap.xml y robots.txt dinámicos.
+
+## Cuando tengas el dominio (Cloudflare + Vercel)
+
+1. **Variables de entorno en Vercel** (Settings → Environment Variables):
+   - `NEXT_PUBLIC_SITE_URL` = `https://tudominio.com`
+   - `NEXT_PUBLIC_GA_MEASUREMENT_ID` = `G-XXXXXXXXXX` (Google Analytics 4)
+
+2. **Google Analytics**: Crear propiedad en [analytics.google.com](https://analytics.google.com), copiar el Measurement ID (G-...) y añadirlo a Vercel.
+
+3. **Google Search Console**: [search.google.com/search-console](https://search.google.com/search-console) → Añadir propiedad → Verificar con tu dominio.
+
+4. **Actualizar** `SITE_URL` en `lib/constants.ts` con tu dominio.

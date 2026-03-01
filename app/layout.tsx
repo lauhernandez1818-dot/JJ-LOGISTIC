@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { SITE_URL } from "@/lib/constants";
 
 const montserrat = Montserrat({
@@ -68,6 +69,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={montserrat.variable}>
       <body className="min-h-screen bg-[#0a0a0a] font-sans antialiased text-[#FAFAFA]">
+        <GoogleAnalytics />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-gold focus:px-4 focus:py-2 focus:text-black focus:outline-none focus:ring-2 focus:ring-gold-light"
