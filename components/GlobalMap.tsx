@@ -142,12 +142,12 @@ export default function GlobalMap() {
                   Operaciones en Venezuela
                 </h3>
                 <p className="text-sm text-gray-500">
-                  J.J LOGISTICS C.A. · Puertos
+                  J.J LOGISTICS C.A. · Aduanas
                 </p>
               </div>
             </div>
             <p className="mt-6 text-gray-400">
-              Cobertura en los principales puertos:
+              Cobertura en todas las aduanas de Venezuela:
             </p>
             <ul className="mt-3 space-y-2">
               {VZLA_PORTS.map((port) => (
@@ -161,7 +161,7 @@ export default function GlobalMap() {
               ))}
             </ul>
             <p className="mt-4 text-sm text-gray-500">
-              Agenciamiento aduanal · Maquinaria pesada · Operaciones portuarias
+              Agenciamiento aduanal · Maquinaria pesada · Operaciones en todas las aduanas
             </p>
           </motion.article>
         </div>

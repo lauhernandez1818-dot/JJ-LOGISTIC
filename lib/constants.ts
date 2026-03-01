@@ -23,6 +23,10 @@ export const VZLA_PORTS = [
   "Maiquetía",
   "Puerto Cabello",
   "Guanta",
+  "Maracaibo",
+  "Sucre",
+  "Margarita",
+  "San Antonio del Táchira Ureña",
 ] as const;
 
 export const ENTITY_USA = {
@@ -38,10 +42,10 @@ export const ENTITY_USA = {
 
 export const ENTITY_VZLA = {
   title: "J.J LOGISTICS C.A.",
-  location: "Puertos: La Guaira, Maiquetía, Puerto Cabello, Guanta",
+  location: "Cubre todas las aduanas de Venezuela: La Guaira, Maiquetía, Puerto Cabello, Guanta, Maracaibo, Sucre, Margarita, San Antonio del Táchira Ureña",
   focus: "Agenciamiento aduanal, maquinaria pesada y operaciones locales",
   details: [
-    "Agenciamiento aduanal en los principales puertos",
+    "Agenciamiento aduanal en todas las aduanas de Venezuela",
     "Maquinaria pesada y grúas especializadas",
     "Operaciones terrestres y portuarias",
   ],
@@ -52,14 +56,14 @@ export const SERVICES = [
     id: "customs",
     title: "Contratación de Agenciamiento Aduanal",
     description:
-      "La Guaira, Maiquetía, Puerto Cabello y Guanta. Gestión integral de despacho aduanero, documentación y cumplimiento normativo.",
+      "Cubre todas las aduanas de Venezuela: La Guaira, Maiquetía, Puerto Cabello, Guanta, Maracaibo, Sucre, Margarita y San Antonio del Táchira Ureña. Gestión integral de despacho aduanero, documentación y cumplimiento normativo.",
     image: "/services/AgenciamientoA.png",
   },
   {
     id: "import",
-    title: "Logísticas de Importación",
+    title: "Logística de Importación y Exportación",
     description:
-      "Todo lo relacionado con la inspección y trámites de importación desde la llegada a costado de buque o avión hasta la entrega final en el almacén que el cliente asigne.",
+      "Seguimiento de toda la cadena de suministro: desde la compra en el país de origen, flete interno, envío marítimo, aéreo o terrestre, nacionalización, trámites aduanales y de almacén, transporte terrestre y entrega final al cliente. Cubrimos importación y exportación de punta a punta.",
     image: "/services/LogisticaD.png",
   },
   {
@@ -101,6 +105,7 @@ export const SERVICES = [
 
 export const NAV_LINKS = [
   { href: "#hero", label: "Inicio" },
+  { href: "#presentacion", label: "Presentación" },
   { href: "#rif", label: "RIF" },
   { href: "#objetivo", label: "Objetivo" },
   { href: "#dual-hub", label: "Estrategia Dual-Hub" },
@@ -137,13 +142,67 @@ export const SERVICES_SUBTITLE =
 
 export const MAP_TITLE = "Presencia Global";
 export const MAP_SUBTITLE =
-  "Sede en Miami (Doral) y cobertura en los principales puertos de Venezuela.";
+  "Sede en Miami (Doral) y cobertura en todas las aduanas de Venezuela.";
 
 /** RIF: PDF en public. Nombre del archivo debe coincidir (mayúsculas/minúsculas en Vercel). */
 export const RIF_PDF_PATH = "/RIF.pdf";
 export const RIF_SECTION_TITLE = "RIF";
 export const RIF_SECTION_SUBTITLE = "Registro de Información Fiscal. Documento oficial de la empresa.";
 export const RIF_BUTTON_LABEL = "Ver RIF";
+
+/** Presentación: Logística de Importación y Exportación */
+export const PRESENTATION_BUTTON_LABEL = "Presentación y estructura sobre...";
+export const PRESENTATION_CONTENT = {
+  title: "Logística de Importación y Exportación",
+  sections: [
+    {
+      number: 1,
+      title: "¿Qué es?",
+      text: "Es el conjunto de procesos y operaciones necesarias para trasladar mercancía desde un proveedor en el extranjero hasta su destino final (almacén, negocio o cliente). Abarca toda la cadena de suministro: desde la compra en origen hasta la entrega final.",
+    },
+    {
+      number: 2,
+      title: "Etapas Clave del Proceso",
+      items: [
+        "Negociación y Compra: Definición de Incoterms (reglas que definen quién paga y quién asume el riesgo en cada etapa del transporte).",
+        "Transporte Internacional: Marítimo (ideal para grandes volúmenes, contenedores FCL o LCL), Aéreo (mercancía urgente, de alto valor o perecedera), Terrestre (comercio fronterizo o regional).",
+        "Gestión Aduanera (Despacho): Contratación de Agente de Aduanas, presentación de documentos (Factura comercial, Bill of Lading, lista de empaque, certificados de origen), pago de aranceles e impuestos.",
+        "Transporte Local (Última Milla): Traslado de la carga desde la aduana o puerto/aeropuerto hasta la bodega final.",
+      ],
+    },
+    {
+      number: 3,
+      title: "Documentación Esencial",
+      items: [
+        "Bill of Lading (B/L): Contrato de transporte marítimo y título de propiedad.",
+        "Factura Comercial: Valor de la mercancía para la aduana.",
+        "Lista de Empaque: Detalle de bultos y contenido.",
+        "Certificado de Origen: Para preferencias arancelarias.",
+      ],
+    },
+    {
+      number: 4,
+      title: "Costos a Considerar",
+      items: [
+        "Flete Internacional.",
+        "Seguro de Carga.",
+        "Aranceles e IVA de Importación.",
+        "Honorarios del Agente de Aduanas.",
+        "Almacenaje (si hay demoras).",
+        "Flete Local / Última milla.",
+      ],
+    },
+    {
+      number: 5,
+      title: "Riesgos Comunes y Cómo Mitigarlos",
+      items: [
+        "Demoras: Elegir bien al socio logístico y tener documentos listos.",
+        "Daños: Contratar un seguro adecuado y usar buen embalaje.",
+        "Cambios regulatorios: Trabajar con un agente de aduanas actualizado.",
+      ],
+    },
+  ],
+} as const;
 
 export const CONTACT_TITLE = "Solicitar Cotización";
 export const CONTACT_SUBTITLE =
@@ -157,8 +216,8 @@ export const OBJECTIVE_TITLE = "Nuestro objetivo";
 export const OBJECTIVE_LEAD =
   "Nuestro objetivo es gestionar las logísticas de empresas internacionales en Venezuela, de la mano de JJ Asociados LLC quien se encarga de la parte administrativa, y ejecutar las operaciones que se describen a continuación.";
 export const OBJECTIVE_ITEMS = [
-  "Contratación de Agenciamiento Aduanal en La Guaira, Maiquetía, Puerto Cabello y Guanta.",
-  "Logísticas de Importación: inspección y trámites desde la llegada a costado de buque o avión hasta la entrega final en el almacén que el cliente asigne.",
+  "Contratación de Agenciamiento Aduanal. Cubre todas las aduanas de Venezuela: La Guaira, Maiquetía, Puerto Cabello, Guanta, Maracaibo, Sucre, Margarita y San Antonio del Táchira Ureña.",
+  "Logística de Importación y Exportación: seguimiento de toda la cadena desde el país de origen hasta la entrega final al cliente.",
   "Contratación de maquinarias pesadas de todo tipo. Grúas para grandes y pequeñas dimensiones. Montacargas.",
   "Contratación de Transporte Terrestre y Marítimo para todo tipo de traslado. Carga pesada, larga y extra-larga. Gabarras y barcos según dimensiones.",
   "Importación de todo tipo de productos.",
