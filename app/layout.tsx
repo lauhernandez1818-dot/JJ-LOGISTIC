@@ -39,13 +39,21 @@ export const metadata: Metadata = {
   openGraph: {
     title: "J.J LOGISTICS C.A | Asesoría USA y Venezuela",
     description:
-      "Logística Administrativa en USA y operaciones en Venezuela. Más de 50 años de experiencia. Dos hubs: Miami (Doral) y Venezuela.",
+      "Logística Administrativa en USA y operaciones en Venezuela. Más de 50 años de experiencia.",
     type: "website",
     url: "/",
+    images: [
+      {
+        url: "/logo-share.png",
+        width: 1200,
+        height: 630,
+        alt: "J.J LOGISTICS C.A",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/logo.png"],
+    images: ["/logo-share.png"],
   },
 };
 

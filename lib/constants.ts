@@ -1,8 +1,11 @@
 export const SITE_NAME = "J.J LOGISTICS C.A";
-export const TAGLINE = "Logística Plus";
+export const TAGLINE = "Asesoría USA y Venezuela";
 
 /** Logo en la barra: solo el logo (JL + nombre). Ruta: "/logo.png". Si está vacío se muestra el nombre en texto. */
 export const BRAND_LOGO_PATH = "/logo.png";
+
+/** Imagen para Open Graph (WhatsApp, redes): 1200x630px. Ruta: "/logo-share.png". */
+export const OG_IMAGE_PATH = "/logo-share.png";
 
 export const USA_ADDRESS = {
   street: "7950 NW 53RD STREET",
