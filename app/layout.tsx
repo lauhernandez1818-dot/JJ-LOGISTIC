@@ -14,8 +14,8 @@ const montserrat = Montserrat({
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || SITE_URL;
 
-// URL absoluta para og:image (WhatsApp requiere URL completa). logo-share.png 1200x630 para vista previa grande.
-const ogImageUrl = `${siteUrl.replace(/\/$/, "")}/logo-share.png`;
+// URL absoluta para og:image (WhatsApp requiere URL completa)
+const ogImageUrl = `${siteUrl.replace(/\/$/, "")}/favicon.ico`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: ogImageUrl,
-        width: 1200,
-        height: 630,
+        width: 256,
+        height: 256,
         alt: "J.J LOGISTICS C.A",
       },
     ],
