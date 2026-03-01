@@ -11,18 +11,16 @@ const montserrat = Montserrat({
 });
 
 const siteUrl =
-  process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "J.J LOGISTICS C.A | Logística Plus - Asesoría USA y Venezuela",
+  title: "J.J LOGISTICS C.A | Asesoría USA y Venezuela",
   description:
     "Logística Administrativa en USA y operaciones en Venezuela. J.J LOGISTICS C.A. y JJ Asociados LLC. Agenciamiento aduanal, transporte terrestre y marítimo, más de 50 años de experiencia.",
   keywords: [
     "J.J LOGISTICS C.A",
-    "Logística Plus",
     "asesoría técnica y logística",
     "más de 50 años de experiencia",
     "personal cualificado y certificado",
@@ -39,11 +37,11 @@ export const metadata: Metadata = {
     "importación",
   ],
   openGraph: {
-    title: "J.J LOGISTICS C.A | Logística Plus - Asesoría USA y Venezuela",
+    title: "J.J LOGISTICS C.A | Asesoría USA y Venezuela",
     description:
       "Logística Administrativa en USA y operaciones en Venezuela. Más de 50 años de experiencia. Dos hubs: Miami (Doral) y Venezuela.",
     type: "website",
-    images: ["/logo.png"],
+    url: "/",
   },
   twitter: {
     card: "summary_large_image",
