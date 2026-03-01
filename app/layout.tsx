@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SITE_URL } from "@/lib/constants";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -11,8 +12,10 @@ const montserrat = Montserrat({
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+  process.env.NEXT_PUBLIC_SITE_URL || SITE_URL;
+
+// URL absoluta para og:image (WhatsApp requiere URL completa)
+const ogImageUrl = `${siteUrl.replace(/\/$/, "")}/logo-share.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -41,10 +44,10 @@ export const metadata: Metadata = {
     description:
       "Logística Administrativa en USA y operaciones en Venezuela. Más de 50 años de experiencia.",
     type: "website",
-    url: "/",
+    url: siteUrl,
     images: [
       {
-        url: "/logo-share.png",
+        url: ogImageUrl,
         width: 1200,
         height: 630,
         alt: "J.J LOGISTICS C.A",
@@ -53,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/logo-share.png"],
+    images: [ogImageUrl],
   },
 };
 

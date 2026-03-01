@@ -1,6 +1,9 @@
 export const SITE_NAME = "J.J LOGISTICS C.A";
 export const TAGLINE = "Asesoría USA y Venezuela";
 
+/** URL pública del sitio (para og:image, etc.). Sobrescribir con NEXT_PUBLIC_SITE_URL si usas dominio propio. */
+export const SITE_URL = "https://jj-logistic.vercel.app";
+
 /** Logo en la barra: solo el logo (JL + nombre). Ruta: "/logo.png". Si está vacío se muestra el nombre en texto. */
 export const BRAND_LOGO_PATH = "/logo.png";
 
