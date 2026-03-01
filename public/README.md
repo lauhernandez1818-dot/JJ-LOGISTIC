@@ -6,7 +6,7 @@ Coloca aquí la imagen de tu logo/marca:
 
 - **Archivo:** `logo.png` (o `logo.webp`)
 - **Uso:** Aparece en la barra superior (navbar) y sustituye el texto del nombre.
-- Si no existe el archivo, se muestra el nombre "JJ LOGISTIC PLUS | JJ ASOCIADOS" en texto.
+- Si no existe el archivo, se muestra el nombre "J.J LOGISTICS C.A" en texto.
 
 Recomendación: logo horizontal, fondo transparente o oscuro, altura aprox. 120–150 px.
 

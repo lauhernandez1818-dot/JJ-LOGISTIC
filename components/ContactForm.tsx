@@ -22,7 +22,7 @@ function buildWhatsAppMessage(form: HTMLFormElement): string {
     SERVICES.find((s) => s.id === serviceId)?.title || serviceId || "No indicado";
 
   const lines: string[] = [
-    "*Nueva solicitud - JJ LOGISTIC*",
+    "*Nueva solicitud - J.J LOGISTICS C.A*",
     "",
     "────────────────────────────",
     "*Nombre:* " + name,

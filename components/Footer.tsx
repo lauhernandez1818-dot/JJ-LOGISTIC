@@ -59,7 +59,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#dual-hub" className="underline-offset-2 transition hover:text-gold hover:underline focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-black rounded-sm">
-                  JJ LOGISTIC PLUS, C.A.
+                  J.J LOGISTICS C.A
                 </Link>
               </li>
             </ul>

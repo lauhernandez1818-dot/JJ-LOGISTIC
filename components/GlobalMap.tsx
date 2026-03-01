@@ -142,7 +142,7 @@ export default function GlobalMap() {
                   Operaciones en Venezuela
                 </h3>
                 <p className="text-sm text-gray-500">
-                  JJ LOGISTIC PLUS, C.A. · Puertos
+                  J.J LOGISTICS C.A. · Puertos
                 </p>
               </div>
             </div>

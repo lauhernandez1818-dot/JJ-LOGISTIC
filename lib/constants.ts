@@ -1,4 +1,4 @@
-export const SITE_NAME = "JJ LOGISTIC PLUS | JJ ASOCIADOS";
+export const SITE_NAME = "J.J LOGISTICS C.A";
 export const TAGLINE = "Logística Plus";
 
 /** Logo en la barra: solo el logo (JL + nombre). Ruta: "/logo.png". Si está vacío se muestra el nombre en texto. */
@@ -31,7 +31,7 @@ export const ENTITY_USA = {
 };
 
 export const ENTITY_VZLA = {
-  title: "JJ LOGISTIC PLUS, C.A.",
+  title: "J.J LOGISTICS C.A.",
   location: "Puertos: La Guaira, Maiquetía, Puerto Cabello, Guanta",
   focus: "Agenciamiento aduanal, maquinaria pesada y operaciones locales",
   details: [
@@ -72,9 +72,9 @@ export const SERVICES = [
   },
   {
     id: "oil",
-    title: "Importación de Productos Petroleros y Otros",
+    title: "Importación de todo tipo de productos",
     description:
-      "Importación de productos petroleros y transporte especializado. Soluciones logísticas para el sector energético.",
+      "Importación de todo tipo de productos y transporte especializado. Soluciones logísticas para su cadena de suministro.",
     image: "/services/ProductosP.png",
   },
   {
@@ -149,19 +149,19 @@ export const WHATSAPP_CONTACT = "584244633909";
 // Sección Objetivo (texto oficial Marjorie Parra)
 export const OBJECTIVE_TITLE = "Nuestro objetivo";
 export const OBJECTIVE_LEAD =
-  "El objetivo principal de nuestra empresa es la Logística Administrativa en USA para recibir los pagos que se deben realizar a los proveedores de empresas en Venezuela, según contratos realizados con nuestros clientes en empresas internacionales. La empresa venezolana JJ Logistic Plus, C.A., adjunta a JJ Asociados LLC, realiza las operaciones que se describen a continuación.";
+  "Nuestro objetivo es gestionar las logísticas de empresas internacionales en Venezuela, de la mano de JJ Asociados LLC quien se encarga de la parte administrativa, y ejecutar las operaciones que se describen a continuación.";
 export const OBJECTIVE_ITEMS = [
   "Contratación de Agenciamiento Aduanal en La Guaira, Maiquetía, Puerto Cabello y Guanta.",
   "Logísticas de Importación: inspección y trámites desde la llegada a costado de buque o avión hasta la entrega final en el almacén que el cliente asigne.",
   "Contratación de maquinarias pesadas de todo tipo. Grúas para grandes y pequeñas dimensiones. Montacargas.",
   "Contratación de Transporte Terrestre y Marítimo para todo tipo de traslado. Carga pesada, larga y extra-larga. Gabarras y barcos según dimensiones.",
-  "Importación de Productos Petroleros y otros.",
+  "Importación de todo tipo de productos.",
   "Contratación de Navieras para trámites de traslados marítimos y aéreos a nivel mundial.",
   "Escolta de Cargas tanto marítimas como terrestres.",
   "Inspección técnica y certificada: recepción en puertos y aeropuertos, verificación documental y física, control de cantidades y conformidad, seguimiento durante transporte y almacenamiento, certificación de entrega al usuario final e informes conforme a normas aplicables.",
 ] as const;
 export const OBJECTIVE_CLOSING =
-  "Somos los encargados de cancelar todos los pagos relacionados a cada operación.";
+  "Contamos con aliados comerciales en toda la cadena de suministros.";
 
 export const MAP_LOCATIONS = [
   {

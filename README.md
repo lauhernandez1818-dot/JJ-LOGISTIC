@@ -1,6 +1,6 @@
-# JJ LOGISTIC & JJ ASOCIADOS — Landing
+# J.J LOGISTICS C.A — Landing
 
-Landing de conversión para JJ LOGISTIC y JJ ASOCIADOS. Next.js 14 (App Router), Tailwind CSS y Framer Motion. Branding negro y dorado metálico.
+Landing de conversión para J.J LOGISTICS C.A y JJ Asociados. Next.js 14 (App Router), Tailwind CSS y Framer Motion. Branding negro y dorado metálico.
 
 ## Cómo ejecutar
 
@@ -26,4 +26,4 @@ npm start
 
 ## SEO
 
-Metadata orientada a: Logística USA-Venezuela, Agenciamiento Aduanal, JJ Logistic, Doral, Puerto Cabello.
+Metadata orientada a: Logística USA-Venezuela, Agenciamiento Aduanal, J.J LOGISTICS C.A, Doral, Puerto Cabello.

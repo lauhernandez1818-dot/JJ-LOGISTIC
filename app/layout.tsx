@@ -11,11 +11,11 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "JJ LOGISTIC PLUS | Logística Plus - Asesoría USA y Venezuela",
+  title: "J.J LOGISTICS C.A | Logística Plus - Asesoría USA y Venezuela",
   description:
-    "Logística Administrativa en USA y operaciones en Venezuela. JJ Logistic Plus, C.A. y JJ Asociados LLC. Agenciamiento aduanal, transporte terrestre y marítimo, más de 50 años de experiencia.",
+    "Logística Administrativa en USA y operaciones en Venezuela. J.J LOGISTICS C.A. y JJ Asociados LLC. Agenciamiento aduanal, transporte terrestre y marítimo, más de 50 años de experiencia.",
   keywords: [
-    "JJ LOGISTIC PLUS",
+    "J.J LOGISTICS C.A",
     "Logística Plus",
     "asesoría técnica y logística",
     "más de 50 años de experiencia",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "importación",
   ],
   openGraph: {
-    title: "JJ LOGISTIC PLUS | Logística Plus - Asesoría USA y Venezuela",
+    title: "J.J LOGISTICS C.A | Logística Plus - Asesoría USA y Venezuela",
     description:
       "Logística Administrativa en USA y operaciones en Venezuela. Más de 50 años de experiencia. Dos hubs: Miami (Doral) y Venezuela.",
     type: "website",
