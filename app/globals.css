@@ -66,13 +66,13 @@ body {
 }
 
 /* Hero: Inicio.png imagen completa (no mosaico), animado y transparente */
-/* background-position: 42% centra el logo que en la imagen está ligeramente a la derecha */
+/* background-position: 40% centra el logo que en la imagen está a la derecha */
 .hero-mosaic {
   position: absolute;
   inset: 0;
   background-image: url("/Inicio.png");
   background-repeat: no-repeat;
-  background-position: 42% 50%;
+  background-position: 40% 50%;
   background-size: cover;
   opacity: 0.18;
   animation: hero-mosaic-drift 45s ease-in-out infinite;
@@ -84,7 +84,7 @@ body {
   .hero-mosaic {
     opacity: 0.22;
     animation-duration: 60s;
-    background-position: 42% 40%;
+    background-position: 40% 40%;
   }
 }
 
