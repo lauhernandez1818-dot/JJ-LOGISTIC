@@ -2,7 +2,13 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { PRESENTATION_BUTTON_LABEL, PRESENTATION_CONTENT } from "@/lib/constants";
+import {
+  PRESENTATION_BUTTON_LABEL,
+  PRESENTATION_CONTENT,
+  PRESENTATION_INTRO,
+  EMAIL_LOGISTICS,
+  EMAIL_ASSOCIATES,
+} from "@/lib/constants";
 
 export default function PresentationSection() {
   const [open, setOpen] = useState(false);
@@ -47,6 +53,9 @@ export default function PresentationSection() {
                 <h2 className="mb-6 text-xl font-bold text-gold md:text-2xl">
                   {PRESENTATION_CONTENT.title}
                 </h2>
+                <p className="mb-6 text-sm leading-relaxed text-gray-400 md:text-base">
+                  {PRESENTATION_INTRO}
+                </p>
                 <div className="space-y-6">
                   {PRESENTATION_CONTENT.sections.map((section) => (
                     <div key={section.number}>
@@ -68,6 +77,20 @@ export default function PresentationSection() {
                       )}
                     </div>
                   ))}
+                </div>
+                <div className="mt-8 flex flex-wrap gap-4 border-t border-gold/20 pt-6">
+                  <a
+                    href={`mailto:${EMAIL_LOGISTICS}`}
+                    className="text-sm text-gold underline-offset-2 transition hover:text-gold-light hover:underline"
+                  >
+                    {EMAIL_LOGISTICS}
+                  </a>
+                  <a
+                    href={`mailto:${EMAIL_ASSOCIATES}`}
+                    className="text-sm text-gold underline-offset-2 transition hover:text-gold-light hover:underline"
+                  >
+                    {EMAIL_ASSOCIATES}
+                  </a>
                 </div>
               </div>
             </motion.div>

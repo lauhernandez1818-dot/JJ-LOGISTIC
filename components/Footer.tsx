@@ -1,5 +1,12 @@
 import Link from "next/link";
-import { SITE_NAME, TAGLINE, USA_ADDRESS, NAV_LINKS } from "@/lib/constants";
+import {
+  SITE_NAME,
+  TAGLINE,
+  USA_ADDRESS,
+  NAV_LINKS,
+  EMAIL_LOGISTICS,
+  EMAIL_ASSOCIATES,
+} from "@/lib/constants";
 
 const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(USA_ADDRESS.full)}`;
 
@@ -51,16 +58,30 @@ export default function Footer() {
           </div>
           <div>
             <p className="font-semibold text-white">Nuestras entidades</p>
-            <ul className="mt-2 space-y-1 text-sm text-gray-400">
+            <ul className="mt-2 space-y-2 text-sm text-gray-400">
               <li>
                 <Link href="#dual-hub" className="underline-offset-2 transition hover:text-gold hover:underline focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-black rounded-sm">
                   JJ ASOCIADOS LLC
                 </Link>
+                <br />
+                <a
+                  href={`mailto:${EMAIL_ASSOCIATES}`}
+                  className="text-gold/90 underline-offset-2 transition hover:text-gold hover:underline"
+                >
+                  {EMAIL_ASSOCIATES}
+                </a>
               </li>
               <li>
                 <Link href="#dual-hub" className="underline-offset-2 transition hover:text-gold hover:underline focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-black rounded-sm">
                   J.J LOGISTICS C.A
                 </Link>
+                <br />
+                <a
+                  href={`mailto:${EMAIL_LOGISTICS}`}
+                  className="text-gold/90 underline-offset-2 transition hover:text-gold hover:underline"
+                >
+                  {EMAIL_LOGISTICS}
+                </a>
               </li>
             </ul>
           </div>

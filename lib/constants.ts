@@ -63,7 +63,7 @@ export const SERVICES = [
     id: "import",
     title: "Logística de Importación y Exportación",
     description:
-      "Seguimiento de toda la cadena de suministro: desde la compra en el país de origen, flete interno, envío marítimo, aéreo o terrestre, nacionalización, trámites aduanales y de almacén, transporte terrestre y entrega final al cliente. Cubrimos importación y exportación de punta a punta.",
+      "Seguimiento de toda la cadena de suministros desde el país de origen hasta la entrega final al cliente. Cubrimos importación y exportación de punta a punta.",
     image: "/services/LogisticaD.png",
   },
   {
@@ -152,13 +152,15 @@ export const RIF_BUTTON_LABEL = "Ver RIF";
 
 /** Presentación: Logística de Importación y Exportación */
 export const PRESENTATION_BUTTON_LABEL = "Presentación y estructura sobre...";
+export const PRESENTATION_INTRO =
+  "Somos una Empresa dedicada a la prestación de servicios integrales en logística internacional para prestar simplicidad y conectividad en el intercambio de bienes y servicios en la cadena de suministros entre países y empresas abarcando actividades aduaneras, de fletamento, seguro de carga, trámites de permisos y exoneraciones entre otros servicios correspondientes a:";
 export const PRESENTATION_CONTENT = {
   title: "Logística de Importación y Exportación",
   sections: [
     {
       number: 1,
       title: "¿Qué es?",
-      text: "Es el conjunto de procesos y operaciones necesarias para trasladar mercancía desde un proveedor en el extranjero hasta su destino final (almacén, negocio o cliente). Abarca toda la cadena de suministro: desde la compra en origen hasta la entrega final.",
+      text: "Es el conjunto de procesos y operaciones necesarias para trasladar mercancía desde un proveedor en el extranjero hasta su destino final (almacén, negocio o cliente). Abarca toda la cadena de suministros: desde la compra en origen hasta la entrega final.",
     },
     {
       number: 2,
@@ -211,13 +213,17 @@ export const CONTACT_SUBTITLE =
 /** Número venezolano para recibir solicitudes (WhatsApp). Formato: 58 + 424 4633909 */
 export const WHATSAPP_CONTACT = "584244633909";
 
+/** Correos corporativos */
+export const EMAIL_LOGISTICS = "info@jjlogistics.services";
+export const EMAIL_ASSOCIATES = "info@jjassociates.llc";
+
 // Sección Objetivo (texto oficial Marjorie Parra)
 export const OBJECTIVE_TITLE = "Nuestro objetivo";
 export const OBJECTIVE_LEAD =
   "Nuestro objetivo es gestionar las logísticas de empresas internacionales en Venezuela, de la mano de JJ Asociados LLC quien se encarga de la parte administrativa, y ejecutar las operaciones que se describen a continuación.";
 export const OBJECTIVE_ITEMS = [
   "Contratación de Agenciamiento Aduanal. Cubre todas las aduanas de Venezuela: La Guaira, Maiquetía, Puerto Cabello, Guanta, Maracaibo, Sucre, Margarita y San Antonio del Táchira Ureña.",
-  "Logística de Importación y Exportación: seguimiento de toda la cadena desde el país de origen hasta la entrega final al cliente.",
+  "Logística de Importación y Exportación: seguimiento de toda la cadena de suministros desde el país de origen hasta la entrega final al cliente.",
   "Contratación de maquinarias pesadas de todo tipo. Grúas para grandes y pequeñas dimensiones. Montacargas.",
   "Contratación de Transporte Terrestre y Marítimo para todo tipo de traslado. Carga pesada, larga y extra-larga. Gabarras y barcos según dimensiones.",
   "Importación de todo tipo de productos.",
