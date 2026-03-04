@@ -11,12 +11,28 @@ export const BRAND_LOGO_PATH = "/logo.png";
 export const OG_IMAGE_PATH = "/logo-share.png";
 
 export const USA_ADDRESS = {
-  street: "7950 NW 53RD STREET",
-  city: "Doral",
-  state: "Miami, Florida",
+  street: "7950 NW 53rd Street",
+  suite: "Suite 337",
+  city: "Miami",
+  state: "Florida",
   zip: "33166",
-  full: "7950 NW 53RD STREET, Doral, Miami, Florida 33166",
+  full: "7950 NW 53rd Street, Suite 337, Miami, Florida 33166",
 };
+
+/** Teléfono principal USA (las llamadas se transfieren 24/7 a Venezuela) */
+export const PHONE_USA = "(305) 901-5057";
+/** Fax USA. Incluir nombre o empresa al enviar. */
+export const PHONE_FAX = "(866) 480-9591";
+/** Número de transferencia (Venezuela) */
+export const PHONE_TRANSFER = "+58 424-436-3909";
+
+/** Instrucciones de correspondencia (Oficina Virtual Offix Solutions) */
+export const CORRESPONDENCE_INSTRUCTIONS = [
+  "Utilice siempre la dirección completa e incluya su nombre o el de su empresa para identificar la correspondencia.",
+  "Solo aceptamos cartas, sobres y documentos a nombre de su empresa o del titular. No aceptamos cajas ni paquetes.",
+  "Retiro de correspondencia: lunes a viernes de 9am a 5pm. Para entrar al edificio marque 001 en el intercomunicador.",
+  "Será notificado por correo electrónico cuando recibamos correspondencia.",
+] as const;
 
 export const VZLA_PORTS = [
   "La Guaira",
@@ -210,8 +226,8 @@ export const CONTACT_TITLE = "Solicitar Cotización";
 export const CONTACT_SUBTITLE =
   "Completa el formulario y nos pondremos en contacto contigo a la brevedad.";
 
-/** Número venezolano para recibir solicitudes (WhatsApp). Formato: 58 + 424 4633909 */
-export const WHATSAPP_CONTACT = "584244633909";
+/** Número venezolano para recibir solicitudes (WhatsApp). Formato: 58 + 424 436-3909 */
+export const WHATSAPP_CONTACT = "584244363909";
 
 /** Correos corporativos */
 export const EMAIL_LOGISTICS = "info@jjlogistics.services";

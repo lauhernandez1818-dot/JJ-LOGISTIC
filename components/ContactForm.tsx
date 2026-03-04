@@ -8,6 +8,11 @@ import {
   CONTACT_SUBTITLE,
   SERVICES,
   WHATSAPP_CONTACT,
+  PHONE_USA,
+  PHONE_FAX,
+  USA_ADDRESS,
+  EMAIL_LOGISTICS,
+  EMAIL_ASSOCIATES,
 } from "@/lib/constants";
 
 function buildWhatsAppMessage(form: HTMLFormElement): string {
@@ -84,6 +89,22 @@ export default function ContactForm() {
           </h2>
           <p className="mx-auto mt-4 text-gray-300">{CONTACT_SUBTITLE}</p>
           <div className="section-title-accent mx-auto mt-4" />
+          <div className="mx-auto mt-6 max-w-md rounded-xl border border-gold/30 bg-black/40 px-4 py-4 text-center text-sm text-gray-400">
+            <p className="font-medium text-gold/90">Contacto directo</p>
+            <p className="mt-2">
+              <a href={`tel:${PHONE_USA.replace(/\D/g, "")}`} className="text-gold/90 hover:text-gold transition underline-offset-2 hover:underline">
+                Tel: {PHONE_USA}
+              </a>
+              {" · "}
+              <span title="Incluir nombre o empresa al enviar">Fax: {PHONE_FAX}</span>
+            </p>
+            <p className="mt-1">
+              <a href={`mailto:${EMAIL_LOGISTICS}`} className="text-gold/90 hover:text-gold transition underline-offset-2 hover:underline">{EMAIL_LOGISTICS}</a>
+              {" · "}
+              <a href={`mailto:${EMAIL_ASSOCIATES}`} className="text-gold/90 hover:text-gold transition underline-offset-2 hover:underline">{EMAIL_ASSOCIATES}</a>
+            </p>
+            <p className="mt-1">{USA_ADDRESS.full}</p>
+          </div>
         </motion.header>
 
         <motion.form

@@ -6,6 +6,8 @@ import {
   NAV_LINKS,
   EMAIL_LOGISTICS,
   EMAIL_ASSOCIATES,
+  PHONE_USA,
+  PHONE_FAX,
 } from "@/lib/constants";
 
 const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(USA_ADDRESS.full)}`;
@@ -30,8 +32,17 @@ export default function Footer() {
             <address className="mt-2 not-italic text-sm text-gray-400">
               {USA_ADDRESS.street}
               <br />
+              {USA_ADDRESS.suite}
+              <br />
               {USA_ADDRESS.city}, {USA_ADDRESS.state} {USA_ADDRESS.zip}
             </address>
+            <p className="mt-2 text-sm text-gray-400">
+              <a href={`tel:${PHONE_USA.replace(/\D/g, "")}`} className="text-gold/90 underline-offset-2 transition hover:text-gold hover:underline">
+                Tel: {PHONE_USA}
+              </a>
+              <br />
+              <span title="Incluir nombre o empresa al enviar">Fax: {PHONE_FAX}</span>
+            </p>
             <a
               href={MAPS_URL}
               target="_blank"

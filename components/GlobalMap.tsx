@@ -6,6 +6,9 @@ import {
   MAP_SUBTITLE,
   USA_ADDRESS,
   VZLA_PORTS,
+  PHONE_USA,
+  PHONE_FAX,
+  CORRESPONDENCE_INSTRUCTIONS,
 } from "@/lib/constants";
 
 // Banderas como imagen para que se vean en todos los dispositivos (no emoji)
@@ -110,6 +113,7 @@ export default function GlobalMap() {
               <p className="font-medium text-white">
                 {USA_ADDRESS.street}
               </p>
+              <p>{USA_ADDRESS.suite}</p>
               <p>
                 {USA_ADDRESS.city}, {USA_ADDRESS.state} {USA_ADDRESS.zip}
               </p>
@@ -117,6 +121,29 @@ export default function GlobalMap() {
             <p className="mt-4 text-sm text-gray-500">
               Oficina administrativa · Pagos internacionales · Coordinación global
             </p>
+            <p className="mt-2 text-sm text-gray-400">
+              <a href={`tel:${PHONE_USA.replace(/\D/g, "")}`} className="text-gold/90 hover:text-gold transition">
+                Tel: {PHONE_USA}
+              </a>
+              {" · "}
+              Fax: {PHONE_FAX}
+            </p>
+            <details className="mt-4 group">
+              <summary className="flex cursor-pointer list-none items-center gap-1.5 text-sm font-medium text-gold/90 hover:text-gold transition [&::-webkit-details-marker]:hidden">
+                <svg className="h-4 w-4 shrink-0 transition group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+                Instrucciones de correspondencia
+              </summary>
+              <ul className="mt-2 space-y-1.5 text-xs text-gray-500">
+                {CORRESPONDENCE_INSTRUCTIONS.map((item, i) => (
+                  <li key={i} className="flex gap-2">
+                    <span className="text-gold/60">•</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </details>
           </motion.article>
 
           {/* Bloque Venezuela */}
