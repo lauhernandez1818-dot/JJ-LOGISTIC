@@ -11,22 +11,22 @@ export const BRAND_LOGO_PATH = "/logo.png";
 export const OG_IMAGE_PATH = "/logo-share.png";
 
 export const USA_ADDRESS = {
-  street: "7950 NW 53rd Street",
-  suite: "Suite 337",
-  city: "Miami",
-  state: "Florida",
-  zip: "33166",
-  full: "7950 NW 53rd Street, Suite 337, Miami, Florida 33166",
+  street: process.env.NEXT_PUBLIC_USA_ADDRESS_STREET || "",
+  suite: process.env.NEXT_PUBLIC_USA_ADDRESS_SUITE || "",
+  city: process.env.NEXT_PUBLIC_USA_ADDRESS_CITY || "",
+  state: process.env.NEXT_PUBLIC_USA_ADDRESS_STATE || "",
+  zip: process.env.NEXT_PUBLIC_USA_ADDRESS_ZIP || "",
+  full: process.env.NEXT_PUBLIC_USA_ADDRESS_FULL || "",
 };
 
-/** Teléfono principal USA (las llamadas se transfieren 24/7 a Venezuela) */
-export const PHONE_USA = "(305) 901-5057";
+/** Teléfono principal USA */
+export const PHONE_USA = process.env.NEXT_PUBLIC_PHONE_USA || "";
 /** Fax USA. Incluir nombre o empresa al enviar. */
-export const PHONE_FAX = "(866) 480-9591";
-/** Número de transferencia (Venezuela) */
-export const PHONE_TRANSFER = "+58 424-436-3909";
+export const PHONE_FAX = process.env.NEXT_PUBLIC_PHONE_FAX || "";
+/** Número de transferencia */
+export const PHONE_TRANSFER = process.env.NEXT_PUBLIC_PHONE_TRANSFER || "";
 
-/** Instrucciones de correspondencia (Oficina Virtual Offix Solutions) */
+/** Instrucciones de correspondencia */
 export const CORRESPONDENCE_INSTRUCTIONS = [
   "Utilice siempre la dirección completa e incluya su nombre o el de su empresa para identificar la correspondencia.",
   "Solo aceptamos cartas, sobres y documentos a nombre de su empresa o del titular. No aceptamos cajas ni paquetes.",
@@ -47,7 +47,7 @@ export const VZLA_PORTS = [
 
 export const ENTITY_USA = {
   title: "JJ ASOCIADOS LLC",
-  location: "Doral, Miami, FL",
+  location: process.env.NEXT_PUBLIC_USA_ADDRESS_CITY ? `Doral, ${process.env.NEXT_PUBLIC_USA_ADDRESS_CITY}, FL` : "Sede Administrativa",
   focus: "Logística administrativa, pagos internacionales y contratación global",
   details: [
     "Oficina administrativa en Doral (Virtual Office)",
@@ -135,7 +135,7 @@ export const NAV_LINKS = [
 export const HERO_HEADLINE =
   "Asesoría técnica y logística para que su mercancía llegue al país.";
 export const HERO_SUBHEADLINE =
-  "Dos hubs, un solo estándar: Miami y Venezuela conectados para su cadena de suministro. Con el respaldo de más de 50 años de experiencia y personal cualificado y certificado.";
+  "Dos hubs, un solo estándar: Oficina Principal y Venezuela conectados para su cadena de suministro. Con el respaldo de más de 50 años de experiencia y personal cualificado y certificado.";
 export const CTA_QUOTE = "Solicitar Cotización";
 
 export const HERO_EXPERIENCE = "Más de 50 años de experiencia";
@@ -150,7 +150,7 @@ export const HERO_TRUST_BADGES = [
 
 export const DUAL_HUB_TITLE = "Estrategia Dual-Hub";
 export const DUAL_HUB_SUBTITLE =
-  "La sinergia entre nuestra oficina en Doral (Miami) y las operaciones en los puertos venezolanos nos permite ofrecer asesoría integral de punta a punta para que su mercancía llegue a su destino final.";
+  "La sinergia entre nuestra oficina administrativa y las operaciones en los puertos venezolanos nos permite ofrecer asesoría integral de punta a punta para que su mercancía llegue a su destino final.";
 
 export const SERVICES_TITLE = "Servicios Industriales";
 export const SERVICES_SUBTITLE =
@@ -158,10 +158,10 @@ export const SERVICES_SUBTITLE =
 
 export const MAP_TITLE = "Presencia Global";
 export const MAP_SUBTITLE =
-  "Sede en Miami (Doral) y cobertura en todas las aduanas de Venezuela.";
+  "Sede central y cobertura en todas las aduanas de Venezuela.";
 
 /** RIF: PDF en public. Nombre del archivo debe coincidir (mayúsculas/minúsculas en Vercel). */
-export const RIF_PDF_PATH = "/RIF.pdf";
+export const RIF_PDF_PATH = process.env.NEXT_PUBLIC_RIF_PDF_PATH || "";
 export const RIF_SECTION_TITLE = "RIF";
 export const RIF_SECTION_SUBTITLE = "Registro de Información Fiscal. Documento oficial de la empresa.";
 export const RIF_BUTTON_LABEL = "Ver RIF";
@@ -226,14 +226,14 @@ export const CONTACT_TITLE = "Solicitar Cotización";
 export const CONTACT_SUBTITLE =
   "Completa el formulario y nos pondremos en contacto contigo a la brevedad.";
 
-/** Número venezolano para recibir solicitudes (WhatsApp). Formato: 58 + 424 436-3909 */
-export const WHATSAPP_CONTACT = "584244363909";
+/** Número venezolano para recibir solicitudes (WhatsApp) */
+export const WHATSAPP_CONTACT = process.env.NEXT_PUBLIC_WHATSAPP_CONTACT || "";
 
 /** Correos corporativos */
-export const EMAIL_LOGISTICS = "info@jjlogistics.services";
-export const EMAIL_ASSOCIATES = "info@jjassociates.llc";
+export const EMAIL_LOGISTICS = process.env.NEXT_PUBLIC_EMAIL_LOGISTICS || "";
+export const EMAIL_ASSOCIATES = process.env.NEXT_PUBLIC_EMAIL_ASSOCIATES || "";
 
-// Sección Objetivo (texto oficial Marjorie Parra)
+// Sección Objetivo
 export const OBJECTIVE_TITLE = "Nuestro objetivo";
 export const OBJECTIVE_LEAD =
   "Nuestro objetivo es gestionar las logísticas de empresas internacionales en Venezuela, de la mano de JJ Asociados LLC quien se encarga de la parte administrativa, y ejecutar las operaciones que se describen a continuación.";
